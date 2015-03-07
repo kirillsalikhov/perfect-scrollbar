@@ -11,6 +11,7 @@ module.exports = {
   maxScrollbarLength: null,
   useBothWheelAxes: false,
   useKeyboard: true,
+  useTextSelection: true,
   suppressScrollX: false,
   suppressScrollY: false,
   scrollXMarginOffset: 0,

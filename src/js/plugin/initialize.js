@@ -31,14 +31,16 @@ module.exports = function (element, userSettings) {
   dragScrollbarHandler(element);
   mouseWheelHandler(element);
   nativeScrollHandler(element);
-  selectionHandler(element);
-
+  
   if (h.env.supportsTouch || h.env.supportsIePointer) {
     touchHandler(element, h.env.supportsTouch, h.env.supportsIePointer);
   }
   if (i.settings.useKeyboard) {
     keyboardHandler(element);
-  }
+  }  
+  if (i.settings.useTextSelection) {
+    selectionHandler(element);    
+  }  
 
   updateGeometry(element);
 };
